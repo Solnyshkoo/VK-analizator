@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="App0._2.GeneralStatisticPage"
+             BackgroundImageSource="BackImage.jpg"
+             >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Likes" FontAttributes="Bold"
+                        TextColor="#CC1B37"
+                        HorizontalTextAlignment="Start" />
+                <microcharts:ChartView x:Name="chartViewLikes" HeightRequest="200" 
+                                       />
+                <Label Text="Comment" FontAttributes="Bold"
+                        TextColor="#CC1B37"
+                        HorizontalTextAlignment="Start" />
+                <microcharts:ChartView x:Name="chartViewComments" HeightRequest="200" 
+                                       />
+                <Label Text="Reposts" FontAttributes="Bold"
+                        TextColor="#CC1B37"
+                        HorizontalTextAlignment="Start" />
+                <microcharts:ChartView x:Name="chartViewReposts" HeightRequest="200" 
+                                       />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

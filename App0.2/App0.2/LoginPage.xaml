@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App0._2.LoginPage"
+    BackgroundImageSource="BackImage.jpg">
+    <ContentPage.Content>
+        <StackLayout Padding="30">
+            <Label Text="Введите ссылку на профиль в VK"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                    TextColor="#CC1B37"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center" Margin="0,20" >
+            </Label>
+            <Entry Placeholder="" 
+                   x:Name="UrlEnter"
+                   VerticalOptions="StartAndExpand" 
+                   ClearButtonVisibility="WhileEditing" 
+                   Keyboard="Url" 
+                   ReturnType="Send" 
+                   IsSpellCheckEnabled="False"
+                   Completed="TextConmlited" 
+                   BackgroundColor="#CACEC2" Margin="0,20"/>
+            <Label Text="Некорректная ссылка на профиль"
+                   x:Name="ErrorText"
+                   TextColor="#FF193F"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="End" 
+                   IsVisible="False"
+                   FontSize="Small" Padding="0,20" >
+                
+            </Label>
+            <Button 
+                x:Name="EnterButton"
+                Text="Дальше"
+                    BackgroundColor="#EC8B8B" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"
+                    />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

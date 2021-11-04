@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App0._2.PhotoStatisticPage" BackgroundImageSource="BackImage.jpg">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image
+                    x:Name="image" 
+                    VerticalOptions="Start"
+                    BackgroundColor="#EC8B8B"                   
+                       />
+                <Grid RowSpacing="0"
+                      x:Name="Likesgrid"
+                      BackgroundColor="#FFFFFF"
+                      Padding="0" HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"  />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+                    <Image
+                         Aspect="AspectFit"
+                         Grid.Column="0"
+                         Grid.Row="0"
+                         Source="Like.png" />
+                    <Image
+                         Aspect="AspectFit"
+                         Grid.Column="1"
+                         Grid.Row="0"
+                         Source="Comments.png" />
+                    <Image
+                         Aspect="AspectFit"
+                         Grid.Column="2"
+                         Grid.Row="0"
+                         Source="Reposts.png" />
+                    <Label
+                        x:Name="Likes"
+                        Grid.Column="0"
+                         Grid.Row="1"
+                        FontAttributes="Bold"
+                         TextColor="#EC8B8B"
+                        HorizontalTextAlignment="Center"
+                        />
+                    <Label
+                        x:Name="Comments"
+                        Grid.Column="1"
+                         Grid.Row="1" 
+                        FontAttributes="Bold"
+                        TextColor="#EC8B8B"
+                        HorizontalTextAlignment="Center"
+                        />
+                    <Label
+                        x:Name="Reposts"
+                        Grid.Column="2"
+                         Grid.Row="1"
+                        FontAttributes="Bold"
+                        TextColor="#EC8B8B"
+                        HorizontalTextAlignment="Center"
+                        />
+
+                </Grid>
+
+                <Grid
+                      BackgroundColor="#FFFFFF">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"  />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="100" />
+                    </Grid.RowDefinitions>
+                    <Label
+                    Text="Описание:"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        TextColor="#CC1B37"
+                        HorizontalTextAlignment="Center"
+                        />
+                    <Label
+                    x:Name="Description"
+                        Grid.ColumnSpan="2"
+                        Text="-"
+                         Grid.Row="1"
+                        TextColor="#EC8B8B" HorizontalOptions="Center"
+                        
+                                         />
+                </Grid>
+                <Grid
+                      BackgroundColor="#FFFFFF">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"  />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+                    <Label
+                    Text="Aнализ цвета изображения:"
+                        Grid.ColumnSpan="2"
+                         Grid.Row="0"
+                        FontAttributes="Bold"
+                        TextColor="#CC1B37"
+                        HorizontalTextAlignment="Center"
+                        />
+                    <Label
+                    Text="Основные цвета:"
+                        Grid.Column="0"
+                         Grid.Row="1"
+                        TextColor="#CC1B37"
+                        HorizontalTextAlignment="Center"
+                        />
+                    <Label
+                    x:Name="DominateColors"
+                        Grid.Column="1"
+                        Text="-"
+                         Grid.Row="1"
+                        TextColor="#EC8B8B"
+                        HorizontalTextAlignment="Center"
+                        />
+                    <Label
+                    Text="Основной цвет заднего плана:"
+                        Grid.Column="0"
+                         Grid.Row="2"
+                        TextColor="#CC1B37"
+                        HorizontalTextAlignment="Center"
+                        />
+                    <Label
+                    x:Name="BackgroundColor"
+                        Text="-"
+                        Grid.Column="1"
+                         Grid.Row="2"
+                        TextColor="#EC8B8B"
+                        HorizontalTextAlignment="Center"
+                        />
+                    <Label
+                    Text="Основной цвет переднего плана:"
+                        Grid.Column="0"
+                         Grid.Row="3"
+                        TextColor="#CC1B37"
+                        HorizontalTextAlignment="Center"
+                        />
+                    <Label
+                    x:Name="ForegroundColor"
+                        Text="-"
+                        Grid.Column="1"
+                         Grid.Row="3"
+                        TextColor="#EC8B8B"
+                        HorizontalTextAlignment="Center"
+                        />
+                </Grid>
+                <Grid
+                      BackgroundColor="#FFFFFF">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"  />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="100" />
+                    </Grid.RowDefinitions>
+                    <Label
+                    Text="Возможные хэштеги:"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        TextColor="#CC1B37"
+                        HorizontalTextAlignment="Center"
+                        />
+                    <Label
+                    x:Name="HashTags"
+                        Text="-"
+                         Grid.Row="1"
+                        Grid.Column="0"
+                        TextColor="#EC8B8B" HorizontalOptions="Center"
+                        
+                                         />
+                </Grid>
+
+                <Grid
+                      BackgroundColor="#FFFFFF">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"  />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="100" />
+                    </Grid.RowDefinitions>
+                    <Label
+                    Text="Лица:"
+                         Grid.Row="0"
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        TextColor="#CC1B37"
+                        HorizontalTextAlignment="Center"
+                        />
+                    <Label
+                    x:Name="Faces"
+                        Text="-"
+                         Grid.Row="1"
+                        Grid.Column="0"
+                        TextColor="#EC8B8B" HorizontalOptions="Center"
+                        
+                                         />
+                </Grid>
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
