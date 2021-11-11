@@ -83,8 +83,8 @@ namespace App0._2
         {
             try
             {
-                //string token = "0dc70b17eb2e25297652821dd761e5747a98e2bba49a7dd7e6523c2eae8184643743c6f0bc4c749fdfec3";
-                string appID = "7781980";
+                //string token = "";
+                string appID = ""; // Here goes your VK app ID 
                 // Выполняем запрос по адресу и получаем ответ в виде строки
                 string photoInfo = Get("https://api.vk.com/method/photos.getAll?v=5.52&owner_" + $"id={VKID}&access_token={token}&extended=1&count=200",
                     HttpStatusCode.OK);
